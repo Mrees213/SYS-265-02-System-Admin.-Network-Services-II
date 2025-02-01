@@ -1,0 +1,30 @@
+This the is script for the dhcp check: # Get the current user's domain and username
+$user = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+
+
+# Get network configuration
+$netConfig = Get-NetIPConfiguration | Where-Object { $_.IPv4DefaultGateway -ne $null -and $_.NetAdapter.Status -eq "Up" }
+
+
+# Get DHCP server address
+
+
+$dhcpServerIp = Get-CimInstance Win32_NetworkAdapterConfiguration -Filter "DHCPEnabled=$true" | Select-Object -ExpandProperty DHCPServer [0]
+
+
+# Output the results
+
+
+Write-Output "Named Domain User: $user"
+Write-Output "IPv4 Address: $($netConfig.IPv4Address.IPAddress)"
+Write-Output "DHCP Server IP: $dhcpServerIP"
+Write-Output "Gateway IP: $($netConfig.IPv4DefaultGateway.NextHop)"
+Write-Output "DNS Server IP: $($netConfig.DNSServer | Where-Object {$_.AddressFamily -eq 2} | Select-Object -ExpandProperty ServerAddresses -First 1)"
+
+
+
+
+
+
+
+
