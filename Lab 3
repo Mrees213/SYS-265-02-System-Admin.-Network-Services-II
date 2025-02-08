@@ -1,0 +1,13 @@
+sudo groupadd docker
+
+sudo usermod -aG docker morgan
+
+cat /etc/group | grep docker
+
+systemctl restart docker
+
+newgrp docker
+
+docker run hello-world
+
+FFind inscutctions on how to install docker composed on 22.04 jammy version on digital ocean. 
