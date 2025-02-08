@@ -1,13 +1,12 @@
 sudo groupadd docker
-
+This creates a docker group using the sudo code.
 sudo usermod -aG docker morgan
 
 cat /etc/group | grep docker
-
+This displays lines from the group and docker file. 
 systemctl restart docker
-
+This is restart the docker. 
 newgrp docker
-
+This command changes the group id during a login session
 docker run hello-world
-
-FFind inscutctions on how to install docker composed on 22.04 jammy version on digital ocean. 
+creates a new container from the image we provided to it
