@@ -1,12 +1,42 @@
 sudo groupadd docker
 This creates a docker group using the sudo code.
 sudo usermod -aG docker morgan
-
+The command modifies the docker group to add morgan. 
 cat /etc/group | grep docker
-This displays lines from the group and docker file. 
+This displays the contents of the group file. Then, it searches for the docker pattern and prints any line with docker in it to the screen. 
 systemctl restart docker
-This is restart the docker. 
+It stops and starts the docker service. 
 newgrp docker
-This command changes the group id during a login session
+This command adds a new group ID during a login session.
 docker run hello-world
 creates a new container from the image we provided to it
+It creates a new container from the Hello World image we provided for it. 
+n
+Containers and advantages:
+In the pets vs cattle aognaoly the, Pets refers to VMs you manually update and patch and more care for then containers. Container is their own little virtual machines that are easily managed and won't affect VM.  
+
+
+
+When attempting to log into the docker01 virtual machine, the default credentials, which were user name: ubuntu and password: Ch@mpl@1n!22 before you changed ubuntu to champuser on canvas, were not. After a ball estimate of 30-50 attempts using both sets of default credentials. 
+Then, on a lark, Champuser was used as a substitute for Ubuntu at 7:00 pm on February 8th, which worked. Then the sudo nano /etc/netplan/00-installer-config.yaml was used to edit  the installer-congfig.yaml file to add the static IP address 10.0.5.12 , and gateway address 10.0.5.2, and changed the dhcp4 settings to ensure that the DHCP client did not assign an IP address.
+The changes were then applied using the sudo netplan apply command. The hostname was then changed to docker01-morgan 
+
+What went well 
+The implementation of the docker installation went well. Different directions were discovered that were more up-to-date than the ones provided, making the installation easier. The link directions were for ubtunu version 20.04. The virtual machine was running 22.04.  
+The installation of the docker composer also went well because I  had unknowingly installed it earlier during the docker installation. This fact was discovered when attempting to perform the docker composed installation with this command sudo apt install docker-compose-plugin.
+The output for that command informed me that docker composed was already updated to the newest version. 
+Deliverable 7 also went well because the commands were easy to implement. It further helped visualize how containers functioned within the lab, which was pretty interesting. 
+
+What I struggled with
+When first attempting to log into the docker01 virtual machine  using the first set of credinetials in canvas (before it got changed) it was unsucessful. THe reason it was frustating was that it took around 30-50 attemtps using both sets of crediontals before realizing that netiher set was going to work. 
+Then I fixed the issue by using champuser on a lark not thinking it was acutally going to work but it did lucky at  7:00 pm on February 8th. On devlerialbe 8  I ran the docker run -d -P training/webapp python app.py command which got an error message \
+The problem is is that the Docker Image Format v1 and Docker Image manifest version 2, schema 1 support, is disabled by default because it's too old or it was removed.  
+Attempts at trouble shooting yield no sucessful results because the solution was the update the image something that was not applicable beacause I did not have access to the image. 
+
+
+What I found interesting: 
+What I found instesting was containers relating to cloud security  
+
+Sentence 1: Describe item.
+Sentence 2: Why I found it x
+Sentence 3: What I learned/ how I fixed it
