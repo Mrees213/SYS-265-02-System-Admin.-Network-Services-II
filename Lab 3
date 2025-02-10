@@ -12,9 +12,6 @@ docker run hello-world
 creates a new container from the image we provided to it
 It creates a new container from the Hello World image we provided for it. 
 n
-Containers and advantages:
-In the pets vs cattle aognaoly the, Pets refers to VMs you manually update and patch and more care for then containers. Container is their own little virtual machines that are easily managed and won't affect VM.  
-
 
 
 When attempting to log into the docker01 virtual machine, the default credentials, which were user name: ubuntu and password: Ch@mpl@1n!22 before you changed ubuntu to champuser on canvas, were not. After a ball estimate of 30-50 attempts using both sets of default credentials. 
@@ -34,9 +31,4 @@ The problem is is that the Docker Image Format v1 and Docker Image manifest vers
 Attempts at trouble shooting yield no sucessful results because the solution was the update the image something that was not applicable beacause I did not have access to the image. 
 
 
-What I found interesting: 
-What I found instesting was containers relating to cloud security  
 
-Sentence 1: Describe item.
-Sentence 2: Why I found it x
-Sentence 3: What I learned/ how I fixed it
