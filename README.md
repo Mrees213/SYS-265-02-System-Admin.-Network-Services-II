@@ -6,3 +6,4 @@ I think the lab was far more difficult than needed by having the DNS point at th
 
 GUi was a term I was unfamiliar with originally, which caused some difficulty for me in figuring out what it is and using context clues to guess what gui means. 
 docker01 configuration
+docker01 configuration
